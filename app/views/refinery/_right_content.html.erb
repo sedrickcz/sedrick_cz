@@ -1,0 +1,24 @@
+<h2>CATEGORIES</h2>
+<% if @categories.any? %>
+  <ul id='categories'>
+    <% @categories.each do |category| %>
+      <li<%= " class='selected'" if @category.present? and @category.id == category.id %>>
+        <%= link_to "#{category.title} (#{category.post_count})", refinery.blog_category_path(category) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<% if @tags.any? %>
+  <h2>TAGS</h2>
+  <nav id='tags'>
+    <% tag_cloud(@tags, %w(tag1 tag2 tag3 tag4)) do |tag, css_class| %>
+      <%= link_to tag.name, refinery.blog_tagged_posts_path(tag.id, tag.name.parameterize), :class => css_class %>
+    <% end %>
+  </nav>
+<% end %>
+
+<h2>RSS FEED</h2>
+<%= link_to t('.subscribe'), refinery.blog_rss_feed_path, :id => "rss_feed_subscribe"%>
+
+<% content_for :meta, auto_discovery_link_tag(:atom, refinery.blog_rss_feed_url, :title => 'RSS Feed') -%>

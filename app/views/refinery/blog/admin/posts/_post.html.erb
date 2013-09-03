@@ -1,0 +1,36 @@
+<li class='clearfix record <%= cycle("on", "on-hover") %>' id="<%= dom_id(post) -%>">
+  <span class='title'>
+    <%= post.title.presence || post.translations.detect {|t| t.title.present?}.title %>
+    <span class="preview">
+      <% post.translations.each do |translation| %>
+        <% if translation.title.present? %>
+          <%= link_to refinery_icon_tag("flags/#{translation.locale}.png", :size => '16x11'),
+              refinery.edit_blog_admin_post_path(post, :switch_locale => translation.locale),
+              :class => 'locale' %>
+          <% end %>
+      <% end %>
+
+      <%= post.published_at.try(:strftime, '%b %d, %Y') || 'draft' %>
+      <%= " by #{post.author.username}" if post.author.present? %>
+      <% if post.draft? %>
+        <span class="label notice"><%= t('refinery.blog.admin.posts.post.draft') %></span>
+      <% else %>
+        <%= post.published_at.strftime('%b %d, %Y') %>
+      <% end %>
+    </span>
+  </span>
+  <span class='actions'>
+    <%= link_to refinery_icon_tag("application_go.png"), refinery.blog_post_path(post),
+        :title => t('.view_live_html'),
+        :target => "_blank" %>
+    <%= link_to refinery_icon_tag("application_edit.png"), refinery.edit_blog_admin_post_path(post),
+         :title => t('.edit') %>
+    <%= link_to refinery_icon_tag("delete.png"), refinery.blog_admin_post_path(post),
+        :class => "cancel confirm-delete",
+        :title => t('.delete'),
+        :method => :delete,
+        :data => {
+          :confirm => t('message', :scope => 'refinery.admin.delete', :title => post.title)
+        } %>
+  </span>
+</li>

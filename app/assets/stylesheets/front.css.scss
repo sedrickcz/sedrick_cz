@@ -1,0 +1,67 @@
+@import url(http://fonts.googleapis.com/css?family=Istok+Web:400,700,400italic,700italic);
+
+#page_container {
+  margin: 0px auto;
+  width: 100%;
+}
+
+#left_content{
+  width: 20%;
+  float: left;
+  margin:0;
+
+  #social{
+    #line_1{
+      margin-left: 115px;
+    }
+
+    #line_2{
+      margin-left: 95px;
+    }
+
+    #line_3{
+      margin-left: 115px;
+    }
+  }
+}
+
+#page{
+  width: 60%;
+  float: left;
+  margin:0;
+    #about_me {
+      img {
+        float:left;
+        margin-right: 50px;
+      }
+
+      #about_me_content {
+        font-family: 'Istok Web';
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+    }
+    #blog_posts {
+      .ruby_holder {
+        float:left;
+        margin-right: 50px;
+        margin-bottom: 100px;
+      }
+      .blog_post {
+        float: left;
+        font-family: 'Istok Web';
+        font-size: 1em;
+        width: 80%;
+      }
+    }
+}
+
+
+
+#right_content{
+  width: 20%;
+  float: left;
+  margin:0;
+}
+
+
