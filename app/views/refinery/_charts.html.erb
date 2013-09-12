@@ -1,0 +1,37 @@
+<% content_for :body do %>
+    <%= image_tag 'about_photo.png', id: 'about_photo' %><br />
+    <div class="chart_wrapper">
+      <canvas id="myChart1" width="100" height="100"></canvas><br />
+      <span class="chart_label">Ruby</span>
+    </div>
+    <div class="chart_wrapper">
+      <canvas id="myChart2" width="100" height="100"></canvas><br />
+      <span class="chart_label">Ruby on Rails</span>
+    </div>
+    <div class="chart_wrapper">
+      <canvas id="myChart3" width="100" height="100"></canvas><br />
+      <span class="chart_label">RefineryCMS</span>
+    </div>
+    <div class="chart_wrapper">
+      <canvas id="myChart4" width="100" height="100"></canvas><br />
+      <span class="chart_label">HTML</span>
+    </div>
+    <div class="chart_wrapper">
+      <canvas id="myChart5" width="100" height="100"></canvas><br />
+      <span class="chart_label">PHP</span>
+    </div>
+    <div class="chart_wrapper">
+      <canvas id="myChart6" width="100" height="100"></canvas><br />
+      <span class="chart_label">Git</span>
+    </div>
+    <div class="chart_wrapper">
+      <canvas id="myChart7" width="100" height="100"></canvas><br />
+      <span class="chart_label">Javascript</span>
+    </div>
+    <div class="chart_wrapper">
+      <canvas id="myChart8" width="100" height="100"></canvas><br />
+      <span class="chart_label">CSS</span>
+    </div>
+    <div class='clear'></div>
+    <%= raw @page.content_for(Refinery::Pages.default_parts.first.to_sym) if Refinery::Pages.default_parts.any? %>
+  <% end -%>

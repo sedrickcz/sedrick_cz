@@ -2,4 +2,28 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  send: Send message
+  subscribe: Subscribe
+  refinery:
+    inquiries:
+      inquiry_mailer:
+        notification:
+          greeting: Hi there
+          you_recieved_new_inquiry: You just received a new inquiry on your website.
+          inquiry_starts: --- inquiry starts ---
+          inquiry_ends: --- inquiry ends ---
+          from: From
+          email: Email
+          phone: Phone
+          message: Message
+          closing_line: Kind Regards
+          ps: P.S. All your inquiries are stored in the "Inquiries" section of Refinery should you ever want to view it later there.
+  activerecord:
+    models:
+      refinery/inquiries/inquiry: inquiry
+    attributes:
+      refinery/inquiries/inquiry:
+        name: Name*
+        email: Email*
+        phone: Phone
+        message: Message*
