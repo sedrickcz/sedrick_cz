@@ -1,13 +1,15 @@
-<h2>CATEGORIES</h2>
-<% if @categories.any? %>
-  <ul id='categories'>
-    <% @categories.each do |category| %>
-      <li<%= " class='selected'" if @category.present? and @category.id == category.id %>>
-        <%= link_to "#{category.title} (#{category.post_count})", refinery.blog_category_path(category) %>
-      </li>
-    <% end %>
-  </ul>
-<% end %>
+<div id='categories_wrapper'>
+  <h2>CATEGORIES</h2>
+  <% if @categories.any? %>
+    <ul id='categories'>
+      <% @categories.each do |category| %>
+        <li<%= " class='selected'" if @category.present? and @category.id == category.id %>>
+          <%= link_to "#{category.title} (#{category.post_count})", refinery.blog_category_path(category) %>
+        </li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
 
 <% if @tags.any? %>
   <h2>TAGS</h2>

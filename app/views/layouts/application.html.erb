@@ -7,15 +7,17 @@
   <body id="<%= canonical_id @page %>">
     <%= site_bar -%>
     <div id="page_container">
-      <section id="left_content">
-        <%= render "/refinery/left_content" -%>
-      </section>
+        <section id="left_content">
+          <%= render "/refinery/left_content" -%>
+        </section>
+      
       <section id="page">
-        <%= yield %>
+          <%= yield %>
       </section>
-      <section id="right_content">
-        <%= render "/refinery/right_content" -%>
-      </section>
+        <section id="right_content">
+          <%= render "/refinery/right_content" -%>
+        </section>
+      <div class='clear'></div>
       <footer>
         <%= render "/refinery/footer" -%>
       </footer>

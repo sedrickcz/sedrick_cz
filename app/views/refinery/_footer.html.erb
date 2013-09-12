@@ -1,4 +1,9 @@
-<p>
-  <%= t('.copyright', :year => Time.now.year,
-                      :site_name => Refinery::Core.site_name) %>
-</p>
+<div id='footer_wrapper'>
+  <%= render '/refinery/contact_form'%>
+  <div class='clear'></div>
+  <p>
+    <%= t('.copyright', :year => Time.now.year,
+                        :site_name => Refinery::Core.site_name) %>
+  </p>
+</div>
+

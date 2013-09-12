@@ -1,0 +1,14 @@
+<% if @inquiry.errors.any? %>
+  $('#name_err').html("<%= @inquiry.errors.full_messages.select{|e| e.include?('Name')}.first %>");
+  $('#email_err').html("<%= @inquiry.errors.full_messages.select{|e| e.include?('Email')}.first %>");
+  $('#message_err').html("<%= @inquiry.errors.full_messages.select{|e| e.include?('Message')}.first %>");
+<% else %>
+  $('#form_info').html('Thank you. Your message was sent succesfuly.');
+  $('#inquiry_name').val("");
+  $('#inquiry_email').val("");
+  $('#inquiry_phone').val("");
+  $('#inquiry_message').val("");
+  $('#name_err').html("");
+  $('#email_err').html("");
+  $('#message_err').html("");
+<% end %>

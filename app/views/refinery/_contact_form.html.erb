@@ -1,0 +1,38 @@
+
+<div class='inquiries'>
+  <h2>Contact me? Ask me? Hire me? </h2>
+    <span id="form_info"></span>
+    <%= form_for [refinery, :inquiries, ::Refinery::Inquiries::Inquiry.new], remote: true do |f| %>
+
+      <div class="field">
+        <%= f.required_label :name, :class => 'placeholder-fallback' %>
+        <%= f.text_field :name, :class => 'input', :required => 'required',
+          :placeholder => t('name', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+        <span class="inq_error" id="name_err"></span>
+      </div>
+      <div class="field">
+        <%= f.required_label :email, :class => 'placeholder-fallback' %>
+        <%= f.email_field :email, :class => 'input email', :required => 'required',
+          :placeholder => t('email', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+        <span class="inq_error" id="email_err"></span>
+      </div>
+
+      <% if Refinery::Inquiries.show_phone_number_field %>
+        <div class="field">
+          <%= f.label :phone, :class => 'placeholder-fallback' %>
+          <%= f.text_field :phone, :class => 'input phone',
+            :placeholder => t('phone', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+        </div>
+      <% end %>
+
+      <div class='field message_field'>
+        <%= f.required_label :message, :class => 'placeholder-fallback' %>
+        <%= f.text_area :message, :rows => 8, :class => 'input', :required => 'required',
+          :placeholder => t('message', :scope => 'activerecord.attributes.refinery/inquiries/inquiry') if Refinery::Inquiries.show_placeholders %>
+        <span class="inq_error" id="message_err"></span>
+      </div>
+      <div class="actions">
+        <%= f.submit t('.send') %>
+      </div>
+    <% end %>
+  </div>
