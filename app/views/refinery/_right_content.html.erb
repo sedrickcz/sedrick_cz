@@ -21,12 +21,12 @@
 <% end %>
 
 <h2>TWITTER FEED</h2>
-<a class="twitter-timeline" href="https://twitter.com/SedRicKCZ" data-widget-id="378277698407108608">Tweets by @SedRicKCZ</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/SedRicKCZ" data-widget-id="378277698407108608">Tweets by @SedRicKCZ</a>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
 
 
 <h2>RSS FEED</h2>
 <%= link_to t('subscribe'), refinery.blog_rss_feed_path, :id => "rss_feed_subscribe"%>
 
 <% content_for :meta, auto_discovery_link_tag(:atom, refinery.blog_rss_feed_url, :title => 'RSS Feed') -%>
-
