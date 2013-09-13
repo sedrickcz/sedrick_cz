@@ -122,6 +122,12 @@ GEM
       railties (~> 3.0)
     pg (0.16.0)
     polyglot (0.3.3)
+    postmark (1.0.1)
+      json
+      rake
+    postmark-rails (0.5.2)
+      actionmailer (>= 3.0.0)
+      postmark (~> 1.0)
     quiet_assets (1.0.2)
       railties (>= 3.1, < 5.0)
     rack (1.4.5)
@@ -246,6 +252,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   pg
+  postmark-rails
   quiet_assets
   rails (= 3.2.14)
   refinerycms (~> 2.1.0)
