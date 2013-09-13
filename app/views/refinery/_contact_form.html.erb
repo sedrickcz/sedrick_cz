@@ -2,7 +2,7 @@
 <div class='inquiries'>
   <h2>Contact me? Ask me? Hire me? </h2>
     <span id="form_info"></span>
-    <%= form_for [refinery, :inquiries, ::Refinery::Inquiries::Inquiry.new], class: 'contact_form', id: 'footer_contact_form', remote: true do |f| %>
+    <%= form_for [refinery, :inquiries, ::Refinery::Inquiries::Inquiry.new], remote: true do |f| %>
 
       <div class="field">
         <%= f.text_field :name, :class => 'input', :required => 'required',

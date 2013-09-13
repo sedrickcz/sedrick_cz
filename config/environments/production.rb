@@ -53,6 +53,26 @@ SedrickCz::Application.configure do
     # config.action_mailer.raise_delivery_errors = false
   end
 
+  #Added per active admin install instructions
+  config.action_mailer.default_url_options = { :host => 'http://sedrick-cz.herokuapp.com' }
+
+
+#These settings are for the sending out email for active admin and consequently the   devise mailer
+  ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.smtp_settings = 
+  {
+
+    :address            => 'smtp.gmail.com',
+    :port               => 587,
+    :domain             => 'gmail.com', #you can also use google.com
+    :authentication     => :plain,
+    :user_name          => 'kratoj@gmail.com',
+    :password           => 'Simonka1989',
+    :enable_starttls_auto => true
+}
+
   # Enable threaded mode
   # config.threadsafe!
 
