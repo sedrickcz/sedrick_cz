@@ -59,7 +59,7 @@ SedrickCz::Application.configure do
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method   = :postmark
-  config.action_mailer.postmark_settings = { :api_key => ENV['POSTMARK_API_KEY'] }
+  config.action_mailer.postmark_settings = { :api_key => '420c8e49-fab5-40c4-af70-b550c19b0167' }
 
   # Enable threaded mode
   # config.threadsafe!
