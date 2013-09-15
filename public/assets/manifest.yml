@@ -29,8 +29,8 @@ ruby_holder.png: ruby_holder-b6c79e256a224bf58e52a4abb4f1f1cf.png
 ruby_holder/index.png: ruby_holder-b6c79e256a224bf58e52a4abb4f1f1cf.png
 application.js: application-ac948c1169979130c5eccf5e58139284.js
 application/index.js: application-ac948c1169979130c5eccf5e58139284.js
-application.css: application-583e5114e3a9cd09378adfbc6b1b4bda.css
-application/index.css: application-583e5114e3a9cd09378adfbc6b1b4bda.css
+application.css: application-0923bfeb699f95d2efac5d7de7009386.css
+application/index.css: application-0923bfeb699f95d2efac5d7de7009386.css
 refinery/blog/frontend.css: refinery/blog/frontend-32a42c2e74cc556b95f3fd5a97cd8423.css
 refinery/blog/frontend/index.css: refinery/blog/frontend-32a42c2e74cc556b95f3fd5a97cd8423.css
 refinery/page-image-picker.js: refinery/page-image-picker-33a4d5509093b597722c0c3d0f5b0fc7.js
